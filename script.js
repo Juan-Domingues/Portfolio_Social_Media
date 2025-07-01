@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Atualiza link ativo baseado na posição da página
     function updateActiveLink() {
-        const sections = ['home', 'sobre'];
+        const sections = ['home', 'sobre', 'projects'];
         let currentSection = '';
         
         sections.forEach(section => {
