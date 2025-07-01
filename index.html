@@ -8,21 +8,43 @@
     <title>Portfolio Juan Domingues</title>
 </head>
 <body>
-    <header></header>
-    <main class="apresentacao">
-        <section class="apresentacao__texto">
+    <header class="cabecalho">
+        <div class="cabecalho__decoracao cabecalho__decoracao--esquerda"></div>
+        <div class="cabecalho__decoracao cabecalho__decoracao--direita"></div>
+        <nav class="cabecalho__menu">
+            <div class="cabecalho__menu__item">
+                <a class="cabecalho__menu__link" href="#home">
+                    <span class="link-text">Home</span>
+                    <div class="link-particles"></div>
+                </a>
+            </div>
+            <div class="cabecalho__separador"></div>
+            <div class="cabecalho__menu__item">
+                <a class="cabecalho__menu__link" href="#sobre">
+                    <span class="link-text">Sobre mim</span>
+                    <div class="link-particles"></div>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main class="apresentacao" id="home">
+        <section class="apresentacao__texto" id="sobre">
             <h1 class="apresentacao__texto__titulo">Improve your digital projects <strong class="titulo-destaque"> with a professional Front-End!</strong></h1>
             <p class="apresentacao__texto_paragrafo">Hey there! I'm Juan, an aspiring Front-end Developer and Web Designer, I plan to share all my work with you, so feel free to contact me, bellow you can see all my social media!</p>   
             <br/>
             <div class="apresentacao__links">
-                <a class="apresentacao__links__botao" href="https://www.instagram.com/jp.dmgs?igsh=MXRqMzBkejlmeXpycw%3D%3D&utm_source=qr">Instagram</a>
-                <a class="apresentacao__links__botao" href="https://www.linkedin.com/in/juan-pablo-araujo-domingues-43b63722a/">LinkedIn</a>
-                <a class="apresentacao__links__botao" href="https://github.com/Juan-Domingues">GitHub</a>
+                <h2 class="apresentacao__links__subtitulo">Find bellow my social media:</h2>
+                <a class="apresentacao__links__botao" href="https://www.instagram.com/jp.dmgs?igsh=MXRqMzBkejlmeXpycw%3D%3D&utm_source=qr"><img src="/Imagens/instagram.png">Instagram</a>
+                <a class="apresentacao__links__botao" href="https://www.linkedin.com/in/juan-pablo-araujo-domingues-43b63722a/"><img src="/Imagens/linkedin.png">linkedin</a>
+                <a class="apresentacao__links__botao" href="https://github.com/Juan-Domingues"><img src="/Imagens/github.png"> GitHub</a>
             </div>
         </section>
-        <img src="Imagens/Juan2.png" alt="Juan's Image">
+        <img src="Imagens/Juan2.png" class="img__juan" alt="Juan's Image">
         
     </main>
-    <footer></footer>
+    <footer class="rodape">
+        <p class="rodape__texto">Developed by Juan Domingues | Contact: jp291103@gmail.com</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
