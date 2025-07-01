@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
-<link rel="stylesheet" href="/Estilos/style.css">
+    <title>Projects - Juan Domingues</title>
+    <link rel="stylesheet" href="./Estilos/style.css">
 </head>
 <body>
     <header class="cabecalho">
@@ -34,11 +34,151 @@
             </div>
         </nav>
     </header>
-    <main>
+    
+    <main class="projects-container">
+        <div class="projects-header">
+            <h1 class="projects-title">My Projects</h1>
+            <p class="projects-subtitle">Explore my latest work and development journey</p>
+            <div class="projects-stats">
+                <div class="stat-item">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">3+</span>
+                    <span class="stat-label">Technologies</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Responsive</span>
+                </div>
+            </div>
+        </div>
 
+        <div class="projects-carousel-container">
+            <button class="carousel-btn carousel-btn--prev" id="prevBtn">
+                <span>‹</span>
+            </button>
+            
+            <div class="projects-carousel" id="projectsCarousel">
+                <!-- Projeto 1 - Template/Exemplo -->
+                <div class="project-card" data-tech="HTML,CSS,JS">
+                    <div class="project-image">
+                        <img src="./Imagens/Portfolio_digital.png" alt="Project 1" class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-preview-btn" onclick="openPreview('project1')">
+                                👁️ Preview
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Portfolio Website</h3>
+                            <div class="project-status status-completed">Completed</div>
+                        </div>
+                        <p class="project-description">A modern and responsive portfolio website with futuristic design elements and smooth animations.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Juan-Domingues/Portfolio_Social_Media" class="project-link github" target="_blank">
+                                <img src="./Imagens/github.png" alt="GitHub">
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 2 - Template para adicionar -->
+                <div class="project-card" data-tech="React,Node">
+                    <div class="project-image">
+                        <img src="./Imagens/project-placeholder.jpg" alt="Project 2" class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-preview-btn" onclick="openPreview('project2')">
+                                👁️ Preview
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">The Forbidden Stack</h3>
+                            <div class="project-status status-development">In Development</div>
+                        </div>
+                        <p class="project-description">A landing page to show our team skills and functions.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Juan-Domingues/The_Forbidden_Stack" class="project-link github" target="_blank">
+                                <img src="./Imagens/github.png" alt="GitHub">
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 3 - Template para adicionar -->
+                <div class="project-card" data-tech="Figma,Design">
+                    <div class="project-image">
+                        <img src="./Imagens/project-placeholder.jpg" alt="Project 3" class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-preview-btn" onclick="openPreview('project3')">
+                                👁️ Preview
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">UI/UX Design</h3>
+                            <div class="project-status status-design">Design</div>
+                        </div>
+                        <p class="project-description">Modern UI/UX design concepts and prototypes created with attention to user experience.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Figma</span>
+                            <span class="tech-tag">UI Design</span>
+                            <span class="tech-tag">Prototype</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link github" target="_blank">
+                                <img src="./Imagens/github.png" alt="GitHub">
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="carousel-btn carousel-btn--next" id="nextBtn">
+                <span>›</span>
+            </button>
+        </div>
+
+        <!-- Filtros -->
+        <div class="projects-filters">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="HTML,CSS,JS">Frontend</button>
+            <button class="filter-btn" data-filter="React,Node">Full Stack</button>
+            <button class="filter-btn" data-filter="Figma,Design">Design</button>
+        </div>
+
+        <!-- Modal Preview -->
+        <div class="project-modal" id="projectModal">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closePreview()">&times;</button>
+                <div class="modal-body" id="modalBody">
+                    <!-- Conteúdo dinâmico do preview -->
+                </div>
+            </div>
+        </div>
     </main>
+
     <footer class="rodape">
         <p class="rodape__texto">Developed by Juan Domingues | Contact: jp291103@gmail.com</p>
     </footer>
+
+    <script src="./js/projects.js"></script>
 </body>
 </html>
